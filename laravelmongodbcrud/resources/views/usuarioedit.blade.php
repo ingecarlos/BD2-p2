@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Editar Usuario</title>
+    <title>Usuario | editar </title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">  
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>  

@@ -15,6 +15,10 @@
         <p>{{ \Session::get('success') }}</p>
       </div><br />
      @endif
+
+    <a href="{{url('producto/add')}}" class="btn btn-success">Crear Producto</a>
+    <br>
+    <br>
     <table class="table table-striped">
     <thead>
       <tr>
@@ -44,8 +48,18 @@
         </td>
       </tr>
       @endforeach
+      <tr>
+        <td colspan="6">
+          <form action="{{action('productoController@buscar')}}" method="post">
+            @csrf
+            <input type="text" class="form-control" name="buscar" placeholder="busqueda..." >
+            <button class="btn btn-danger" type="submit">Buscar</button>
+          </form>  
+        </td>
+      </tr>
     </tbody>
   </table>
   </div>
+
   </body>
 </html>

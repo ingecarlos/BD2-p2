@@ -13,6 +13,15 @@ class productoController extends Controller
 		return view('productoindex',compact('productos'));
 	}
 
+	public function buscar(Request $request){
+		if($request->buscar!=""){
+			$productos = producto::where('nombre','like','%'.$request->buscar.'%')->get();
+		}else{
+			$productos = producto::all();
+		}
+		return view('productoindex',compact('productos'));	
+	}
+
     public function create()
     {
     	return view('productocreate');

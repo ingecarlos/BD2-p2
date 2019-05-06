@@ -13,6 +13,18 @@ class usuarioController extends Controller
 		return view('usuarioindex',compact('usuarios'));
 	}
 
+
+    public function buscar(Request $request){
+        if($request->buscar!=""){
+            $usuarios = usuario::where('nombres','like','%'.$request->buscar.'%')
+                                ->orWhere('apellidos','like','%'.$request->buscar.'%')
+                                ->get();
+        }else{
+            $usuarios = usuario::all();
+        }
+        return view('usuarioindex',compact('usuarios'));  
+    }
+    
     public function create()
     {
     	return view('usuariocreate');

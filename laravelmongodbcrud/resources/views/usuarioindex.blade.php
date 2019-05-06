@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Index Page</title>
+    <title>Usuarios</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
@@ -15,6 +15,10 @@
         <p>{{ \Session::get('success') }}</p>
       </div><br />
      @endif
+
+    <a href="{{url('usuario/add')}}" class="btn btn-success">Crear Usuario</a>
+    <br><br>
+
     <table class="table table-striped">
     <thead>
       <tr>
@@ -46,6 +50,15 @@
         </td>
       </tr>
       @endforeach
+      <tr>
+        <td colspan="6">
+          <form action="{{action('usuarioController@buscar')}}" method="post">
+            @csrf
+            <input type="text" class="form-control" name="buscar" placeholder="busqueda..." >
+            <button class="btn btn-danger" type="submit">Buscar</button>
+          </form>  
+        </td>
+      </tr>
     </tbody>
   </table>
   </div>
