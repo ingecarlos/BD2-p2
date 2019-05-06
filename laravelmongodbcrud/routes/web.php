@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('usuario/add','usuarioController@create');
+Route::post('usuario/add','usuarioController@store');
+Route::get('usuario','usuarioController@index');
+Route::get('usuario/edit/{id}','usuarioController@edit');
+Route::post('usuario/edit/{id}','usuarioController@update');
+Route::delete('usuario/{id}','usuarioController@destroy');
