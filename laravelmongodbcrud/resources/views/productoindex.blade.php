@@ -16,6 +16,9 @@
       </div><br />
      @endif
 
+    <a href="{{url('producto')}}" class="btn btn-default">productos</a>
+    <a href="{{url('usuario')}}" class="btn btn-default">usuarios</a>
+    <br>
     <a href="{{url('producto/add')}}" class="btn btn-success">Crear Producto</a>
     <br>
     <br>
