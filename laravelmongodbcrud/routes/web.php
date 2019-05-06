@@ -23,3 +23,11 @@ Route::get('usuario','usuarioController@index');
 Route::get('usuario/edit/{id}','usuarioController@edit');
 Route::post('usuario/edit/{id}','usuarioController@update');
 Route::delete('usuario/{id}','usuarioController@destroy');
+
+
+Route::get('producto/add','productoController@create');
+Route::post('producto/add','productoController@store');
+Route::get('producto','productoController@index');
+Route::get('producto/edit/{id}','productoController@edit');
+Route::post('producto/edit/{id}','productoController@update');
+Route::delete('producto/{id}','productoController@destroy');
