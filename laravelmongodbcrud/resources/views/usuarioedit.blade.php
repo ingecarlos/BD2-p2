@@ -51,6 +51,7 @@
             <label for="password">Password:</label>
             <input type="password" class="form-control" name="password" value="{{$usuario->password}}">
           </div>
+        </div>
         <div class="row">
           <div class="col-md-4"></div>
           <div class="form-group col-md-4">
